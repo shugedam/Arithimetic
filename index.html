@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Arithimetic</title>
+</head>
+<body style="background-image: linear-gradient(#ADE4DB,#088395);background-repeat: no-repeat; height: 100vh;">
+    <center>
+        <form action="">
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Arithimetic Application</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Add First No</td>
+                        <td><input type="text" id="fno" value="" size="45"></td>
+                    </tr>
+                    <tr>
+                        <td>Add Second No</td>
+                        <td><input type="text" id="sno"  value="" size="45"></td>
+                    </tr>
+                    <tr>
+                        <td>Answer</td>
+                        <td><input type="text" id="ans"  value="" size="45"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="button" value="ADD" name="ADD"  onclick="Add()">
+                            <input type="button" value="SUB" name="SUB"  onclick="Sub()">
+                            <input type="button" value="Multi" name="multiply"  onclick="Multiply()">
+                            <input type="button" value="Division" name="division"  onclick="Division()">
+                            <input type="reset"  value="RESET" name="reset" onclick="clear()">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </center>
+    <script language="javascript">
+        function Add()
+        {
+            // alert("I m in add")
+            var a=document.getElementById("fno").value.toString();
+            console.log(a)
+            var b=document.getElementById("sno").value;
+            var c=parseInt(a)+parseInt(b);
+            // alert(a+"+"+b+"="+c);
+
+            document.getElementById("ans").value=c;
+        }
+
+        function Sub()
+        {
+            // alert("I m in sub")
+            var a=document.getElementById("fno").value;
+            var b=document.getElementById("sno").value;
+            var c=parseInt(a)-parseInt(b);
+            // alert(a+"-"+b+"="+c);
+
+            document.getElementById("ans").value=c;
+        }
+
+        function Multiply()
+        {
+            // alert("I m in multiply")
+            var a=document.getElementById("fno").value;
+            var b=document.getElementById("sno").value;
+            var c=parseInt(a)*parseInt(b);
+            // alert(a+"*"+b+"="+c);
+
+            document.getElementById("ans").value=c;
+        }
+
+        function Division()
+        {
+            // alert("I m in division")
+            var a=document.getElementById("fno").value;
+            var b=document.getElementById("sno").value;
+            var c=parseInt(a)/parseInt(b);
+            // alert(a+"/"+b+"="+c);
+
+            document.getElementById("ans").value=c;
+        }
+        
+        function clear()
+        {
+            document.getElementById("fno").value="";     
+            document.getElementById("sno").value="";     
+            document.getElementById("ans").value="";     
+        }
+    </script>
+</body>
+</html>
